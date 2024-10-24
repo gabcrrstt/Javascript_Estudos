@@ -1,7 +1,7 @@
 
 export class Cliente{
     nome;
-    cpf;
+    _cpf;
     // # é privado  por exemplo "#saldo"
     // no entanto, ainda nao esta implementado a classes privadas
     //enquanto a proposta de campos privados não é oficialmente implementada,
@@ -9,8 +9,18 @@ export class Cliente{
 
 
 // no typescript existe as classes privadas
+
+
+    get cpf(){
+       return this._cpf;
+    }
+
+    constructor(nome, cpf){
+        this.nome = nome;
+        this._cpf = cpf;
+    }
 }
 
-new Cliente();
+
 
 
